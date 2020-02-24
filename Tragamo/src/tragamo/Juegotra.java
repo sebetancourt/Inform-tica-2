@@ -128,7 +128,7 @@ public class Juegotra extends javax.swing.JFrame {
             
             cont2+=1;
             lblProgresivo.setText(String.valueOf(b));
-            if (Integer.parseInt(lblProgresivo.getText())==0)
+            if (Integer.parseInt(lblProgresivo.getText())==0 || Integer.parseInt(lblProgresivo.getText())<apues )
             {
                 JOptionPane.showMessageDialog(null,"No tienes suficinte credito");
                 System.exit( 0 );
@@ -159,13 +159,14 @@ public class Juegotra extends javax.swing.JFrame {
                   b=Integer.parseInt(lblProgresivo.getText())+apues;
                   lblProgresivo.setText(String.valueOf(b)); 
                 }
-             }
-             else if (a==a1 || a1==a2 || a==a2)
-             {
+                else
+                {  
                  JOptionPane.showMessageDialog(null,"Pierdes");
                  b=Integer.parseInt(lblProgresivo.getText())-apues;
                  lblProgresivo.setText(String.valueOf(b));   
+                }
              }
+             
              else
              {
                  JOptionPane.showMessageDialog(null,"Pierdes");
